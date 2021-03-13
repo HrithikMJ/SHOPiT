@@ -1,0 +1,91 @@
+.landing-content {
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+  top: 10vh;
+  overflow-y: scroll;
+}
+
+.landing-section {
+  width: calc(100% - 15px);
+}
+
+.landing-content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.landing-content::-webkit-scrollbar-thumb {
+  background-color: rgba(240, 248, 255, 0.5);
+}
+
+.landing-banner {
+  width: 90%;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+      to top,
+      rgb(17, 117, 231, 0.5),
+      rgba(136, 0, 133, 0.6)
+    ),
+    url("../images/Banner1.jpg") center;
+  background-size: cover;
+}
+
+.landing-banner-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-banner-content h1,
+.landing-banner-content h2,
+.landing-banner-content h3,
+.landing-banner-content h4,
+.landing-banner-content h5 {
+  color: rgb(255, 255, 255);
+  margin: 5px;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.301);
+}
+
+.landing-banner-content button {
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  outline: none;
+  border-radius: 20px;
+  background-color: aliceblue;
+  border: 2px solid rgba(240, 248, 255, 0);
+  transition: all 200ms ease-in-out;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.landing-banner-content button:hover {
+  border: 2px solid aliceblue;
+  background-color: rgba(240, 248, 255, 0);
+  color: aliceblue;
+}
+
+.landing-banner h1 {
+  font-size: 2.6rem;
+}
+.landing-banner h2 {
+  font-size: 2.4rem;
+}
+.landing-banner h3 {
+  font-size: 2.2rem;
+}
+.landing-banner h4 {
+  font-size: 2rem;
+}
+.landing-banner h5 {
+  font-size: 1.8rem;
+}
