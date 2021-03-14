@@ -1,89 +1,522 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="A e-commercer webapplication">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/team.css">
+    <link rel="stylesheet" href="./styles/landing.css">
+    <link rel="stylesheet" href="./styles/shop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <title>SHOPiT👾</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.3.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.3.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<body>
+    <header>
+
+        <div class="nav-container">
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-link" id="landing">Home</li>
+                    <li class="nav-link" id="contact" onclick="pageAnimate('contact')">Contact</li>
+                    <li class="nav-link" id="team" onclick="pageAnimate('team')">Team</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="logo">
+            <span onclick="pageAnimate('landing')" class="fill-right"><a href="https://github.com/dharunvs/Centigrade/blob/main/images/logo.gif" target="_blank" > </a>Centigrade👾</span>
+        </div>
+        <div class="shop-link">
+            <li id="shop" onclick="pageAnimate('shop')"><p>Shop Now <i class="fas fa-shopping-cart"></i></p></li>
+        </div>
+
+
+        <div class="intro">
+            <div class="intro-text">
+               <h1 class="hide"><span class="text">Centigrade👾</span></h1>
+            </div>
+        </div>
+        <div class="slider"></div>
+    </header>
+    <div class="pages">
+
+        <div class="landing">
+            <div class="landing-content">
+                <section class="landing-section">
+                    <div class="landing-banner">
+                        <div class="landing-banner-content">
+                            <h1>Style</h1>
+                            <h2>is a way to say</h2>
+                            <h3>Who you are</h3>
+                            <h4>without having to</h4>
+                            <h5>speak</h5>
+                            <div class="buttons">
+                                <button onclick="pageAnimate('shop')">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing-teams">
+                        <div class="landing-teams-container">
+                            <div class="lteams-container lt1">
+                                <img class="land-teams-img" src="https://avatars.githubusercontent.com/u/72387676?s=400&u=ba8e1ee77546c45d47036fb1922995bac5218382&v=4" alt="Dharun VS" style="width:100%">
+                            </div>
+                            <div class="lteams-container lt2">
+                                <img class="img2" src="https://avatars.githubusercontent.com/u/76607616?s=400&u=7d34547eac0b82e2d3d5b6bb709565dd05682229&v=4" alt="Dharun C" style="width:100%">
+                            </div>
+                            <div class="lteams-container lt3">
+                                <img class="img3" src="https://avatars.githubusercontent.com/u/31767239?s=400&u=60cbb0cfc91e69c6e915d41197e12f3bc0f19cb8&v=4" alt="Hrithik MJ" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="landing-teams-description">
+                            <h1>Check out our crew!</h1>
+                            <button onclick="pageAnimate('team')">Team</button>
+                        </div>
+
+
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <div class="team">
+
+            <div class="team-members">
+
+                <div class="member member1">
+
+                    <div class="card card1">
+                        <h1>Dharun V S</h1>
+                        <h3> Reach us!</h3>
+                        <p>
+                            <a class="github" href="https://github.com/dharunvs" target="__blank"><i class="fab fa-github"></i></a>
+                            <a class="mail" href="mailto:dharunsivakumar002@gmail.com" target="__blank"><i class="fas fa-at"></i></a>
+                        </p>
+                    </div>
+                    <img class="img1" src="https://avatars.githubusercontent.com/u/72387676?s=400&u=ba8e1ee77546c45d47036fb1922995bac5218382&v=4" alt="Dharun VS" style="width:100%">
+
+                </div>
+
+                <div class="member member2">
+
+                    <div class="card card2">
+                        <h1>Dharun C</h1>
+                        <h3> Reach us!</h3>
+                        <p>
+                            <a class="github" href="https://github.com/Dharundds" target="__blank"><i class="fab fa-github"></i></a>
+                            <a class="mail" href="mailto:dharundds@gmail.com" target="__blank"><i class="fas fa-at"></i></a>
+                        </p>
+                    </div>
+                    <img class="img2" src="https://avatars.githubusercontent.com/u/76607616?s=400&u=7d34547eac0b82e2d3d5b6bb709565dd05682229&v=4" alt="Dharun C" style="width:100%">
+
+                </div>
+
+                <div class="member member3">
+
+                    <div class="card card3">
+                        <h1>Hrithik M J</h1>
+                        <h3>Reach us!</h3>
+                        <p>
+                            <a class="github" href="https://github.com/HrithikMJ"  target="__blank"><i class="fab fa-github"></i></a>
+                            <a class="mail" href="mailto:hrithikmj003@gmail.com" target="__blank"><i class="fas fa-at"></i></a>
+                        </p>
+                    </div>
+                    <img class="img3" src="https://avatars.githubusercontent.com/u/31767239?s=400&u=60cbb0cfc91e69c6e915d41197e12f3bc0f19cb8&v=4" alt="Hrithik MJ" style="width:100%">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="contact">
+
+            <div class="main-block">
+                <div class="left-part">
+
+                    <a class="social-link" href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <div class="icon" id="first">
+                            <div>
+                                <svg height="80" width="80">
+                                    <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"></circle>
+                                </svg>
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </div>
+                            <p class="social-link-text">Instagram</p>
+                        </div>
+                    </a>
+                    <a class="social-link" href="https://youtu.be/dQw4w9WgXcQ" target="_blank" >
+                        <div class="icon" id="second">
+                            <div>
+                                <svg height="80" width="80">
+                                    <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"></circle>
+                                </svg>
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </div>
+                            <p class="social-link-text">Facebook</p>
+                        </div>
+                    </a>
+                    <a class="social-link" href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <div class="icon" id ="third">
+                            <div>
+                                <svg height="80" width="80">
+                                    <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"></circle>
+                                </svg>
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </div>
+                            <p class="social-link-text">Twitter</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="popup">
+                    <div id="popup-message">
+                    </div>
+                    <button onclick="okay()">Okay</button>
+                </div>
+
+                <form id="myForm">
+                    <h1>Contact Us</h1>
+                    <div class="info">
+                        <input name="Full Name" placeholder="Full name" />
+                        <input name="Email" placeholder="Email" />
+                        <input name="Phone No" placeholder="Phone number" />
+                        <textarea rows="4" name="Message" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="button" onclick="Validate()" href="/">Submit</button>
+                    <div class="submitted">Form submitted successfully</div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="shop">
+            <div class="bill">
+                <h2>Cart</h2>
+                <hr id="hr1">
+                <div class="items-display">
+                    <div id="cart-mini-display"></div>
+                    <div id="total">
+                        <div id="price-display">
+                            <h3>Price Details</h3>
+                            <hr id="hr2">
+                            <div id="price-insert">
+                                <div>
+                                    <p>Price</p><span id="insert-price"></span>
+                                </div>
+                                <div>
+                                    <p>Discount</p><span id="insert-discount"></span>
+                                </div>
+                                <div>
+                                    <p>Delivery Charges</p><span id="insert-dcharges"></span>
+
+                                </div>
+                                <hr id="hr2">
+                                <div>
+                                    <p id="spl">Total Amount</p><span id="insert-total"></span>
+                                </div>
+                                <hr id="hr2">
+                            </div>
+                        </div>
+                        <button class="place-order">Place Order</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="shop-content">
+                <div class="cart" onclick="cartAnimate()"><i class="fas fa-shopping-cart"></i></div>
+
+                <section class="shop-section">
+                    <div class="new-arrival">
+                        <h1>New Arrival</h1>
+                        <div class="new-arrival-products">
+                            <div class="product">
+                                <div class="img-container i1">
+                                    <img src="./images/pic5.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">Nice Jacket</h2>
+                                    <button onclick="getItem('Nice Jacket', './images/pic5.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i2">
+                                    <img src="./images/pic2.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">Cool Jacket</h2>
+                                    <button onclick="getItem('Cool Jacket', './images/pic2.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i3">
+                                    <img src="./images/pic3.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">Okayish Jacket </h2>
+                                    <button onclick="getItem('Okayish Jacket', './images/pic3.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i4">
+                                    <img src="./images/pic4.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">Uncool Jacket</h2>
+                                    <button onclick="getItem('Uncool Jacket', './images/pic4.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="products-banner">
+
+
+                        <div class="banner-gallery">
+                            <div class="banner-display bd1">
+                                <div class="banner-image-container">
+                                    <img src="./images/pic6.png" alt="">
+                                </div>
+                                <div class="right-part">
+                                    <div class="banner-description">
+                                        <h3 class="banner-title">A Black Jacket</h3>
+                                        <p>Watcha expect here? It is suppsoed to be a product description for the above Jacket .</p>
+                                    </div>
+                                    <div class="colors">
+                                        <label class="radio-btn blue">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark blue"></div>
+                                        </label>
+                                        <label class="radio-btn green">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark green"></div>
+                                        </label>
+                                        <label class="radio-btn red">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark red"></div>
+                                        </label>
+                                        <label class="radio-btn yellow">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark yellow"></div>
+                                        </label>
+
+
+
+                                    </div>
+                                    <div class="banner-buttons"><button onclick="getItem('A Black Jacket', './images/pic6.png', 100)">Add to cart</button><div class="banner-price">100$</div></div>
+                                </div>
+                            </div>
+                            <div class="banner-display bd2">
+                                <div class="banner-image-container">
+                                    <img src="./images/pic7.png" alt="">
+                                </div>
+                                <div class="right-part">
+                                    <div class="banner-description">
+                                        <h3 class="banner-title">An Orange Jacket</h3>
+                                        <p>Watcha expect here? It is suppsoed to be a product description for the above Jacket .</p>
+                                    </div>
+                                    <div class="colors">
+                                        <label class="radio-btn blue">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark blue"></div>
+                                        </label>
+                                        <label class="radio-btn green">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark green"></div>
+                                        </label>
+                                        <label class="radio-btn red">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark red"></div>
+                                        </label>
+                                        <label class="radio-btn yellow">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark yellow"></div>
+                                        </label>
+
+
+
+                                    </div>
+                                    <div class="banner-buttons"><button onclick="getItem('An Orange Jacket', './images/pic7.png', 100)">Add to cart</button><div class="banner-price">100$</div></div>
+                                </div>
+                            </div>
+                            <div class="banner-display bd3">
+                                <div class="banner-image-container">
+                                    <img src="./images/pic8.png" alt="">
+                                </div>
+                                <div class="right-part">
+                                    <div class="banner-description">
+                                        <h3 class="banner-title">A Dope Jacket</h3>
+                                        <p>Watcha expect here? It is suppsoed to be a product description for the above Jacket .</p>
+                                    </div>
+                                    <div class="colors">
+                                        <label class="radio-btn blue">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark blue"></div>
+                                        </label>
+                                        <label class="radio-btn green">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark green"></div>
+                                        </label>
+                                        <label class="radio-btn red">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark red"></div>
+                                        </label>
+                                        <label class="radio-btn yellow">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark yellow"></div>
+                                        </label>
+
+
+
+                                    </div>
+                                    <div class="banner-buttons"><button onclick="getItem('A Dope Jacket', './images/pic8.png', 100)">Add to cart</button><div class="banner-price">100$</div></div>
+                                </div>
+                            </div>
+                            <div class="banner-display bd4">
+                                <div class="banner-image-container">
+                                    <img src="./images/pic9.png" alt="">
+                                </div>
+                                <div class="right-part">
+                                    <div class="banner-description">
+                                        <h3 class="banner-title">A pink Jacket</h3>
+                                        <p>Watcha expect here? It is suppsoed to be a product description for the above Jacket .</p>
+                                    </div>
+                                    <div class="colors">
+                                        <label class="radio-btn blue">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark blue"></div>
+                                        </label>
+                                        <label class="radio-btn green">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark green"></div>
+                                        </label>
+                                        <label class="radio-btn red">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark red"></div>
+                                        </label>
+                                        <label class="radio-btn yellow">
+                                            <input type="radio" name="color"></input>
+                                            <div class="checkmark yellow"></div>
+                                        </label>
+
+
+
+                                    </div>
+                                    <div class="banner-buttons"><button onclick="getItem('A pink Jacket', './images/pic9.png', 100)">Add to cart</button><div class="banner-price">100$</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnail">
+                            <button class="thumb-container" onclick="bannerAnimate('bd1')"><img src="./images/pic6.png" alt=""></button>
+                            <button class="thumb-container" onclick="bannerAnimate('bd2')"><img src="./images/pic7.png" alt=""></button>
+                            <button class="thumb-container" onclick="bannerAnimate('bd3')"><img src="./images/pic8.png" alt=""></button>
+                            <button class="thumb-container" onclick="bannerAnimate('bd4')"><img src="./images/pic9.png" alt=""></button>
+                        </div>
+
+                    </div>
+
+                    <div class="featured">
+                        <h1>Featured</h1>
+                        <div class="new-arrival-products">
+                            <div class="product">
+                                <div class="img-container i1">
+                                    <img src="./images/pic9.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">A Normal Jacket</h2>
+                                    <button onclick="getItem('A Normal Jacket', './images/pic9.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i2">
+                                    <img class="big1" src="./images/pic10.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">A Normal Jacket</h2>
+                                    <button onclick="getItem('A Normal Jacket', './images/pic10.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i3">
+                                    <img class="big2" src="./images/pic11.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">A Normal Jacket</h2>
+                                    <button onclick="getItem('A Normal Jacket', './images/pic11.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i4">
+                                    <img src="./images/pic5.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">A Normal Jacket</h2>
+                                    <button onclick="getItem('A Normal Jacket', './images/pic5.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-arrival-products">
+                            <div class="product">
+                                <div class="img-container i1">
+                                    <img src="./images/pic4.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">A Normal Jacket</h2>
+                                    <button onclick="getItem('A Normal Jacket', './images/pic4.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i2">
+                                    <img src="./images/pic3.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">A Normal Jacket</h2>
+                                    <button onclick="getItem('A Normal Jacket', './images/pic3.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i3">
+                                    <img src="./images/pic2.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">A Normal Jacket</h2>
+                                    <button onclick="getItem('A Normal Jacket', './images/pic2.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="img-container i4">
+                                    <img  class="big3"src="./images/pic1.png" alt="">
+                                </div>
+                                <div class="product-bottom">
+                                    <h2 class="name">A Normal Jacket</h2>
+                                    <button onclick="getItem('A Normal Jacket', './images/pic1.png', 100)" class="add-to-cart">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="added">Item added to cart</div>
+        </div>
+
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="./scripts/app.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="./scripts/team.js"></script>
+    <script src="./scripts/shop.js"></script>
+    <script src="./scripts/contact.js"></script>
+</body>
 </html>

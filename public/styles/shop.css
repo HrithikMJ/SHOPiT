@@ -8,7 +8,7 @@
 
 .shop-section {
   width: calc(80% - 15px);
-  height: 380%;
+  height: 320%;
   margin: 8vh auto 10vh auto;
   padding: 0%;
   background-color: rgba(240, 248, 255, 0.281);
@@ -443,10 +443,17 @@
   padding: 10px;
   font-size: 1.2rem;
   color: black;
-  background-color: aliceblue;
+  background-color: rgb(182, 221, 255);
   border: none;
   outline: none;
+  transition: all 200ms ease-in-out;
 }
+
+.place-order:hover{
+  background-color: rgb(109, 187, 255);
+}
+
+
 
 .item {
   height: 20vh;
