@@ -7,9 +7,9 @@ Team project for Shasun's Hackathon by [Dharun V S](https://github.com/dharunvs)
 
 ## About
 
-   *[SHOPiT](https://shopit-34927.web.app/) is an e-commerce web application .
+   [SHOPiT](https://shopit-34927.web.app/) is an e-commerce web application .
 
-   *It is built mainly with HTML5 , CSS3 and javaScript.
+   It is built mainly with HTML5 , CSS3 and javaScript.
 
 
 
